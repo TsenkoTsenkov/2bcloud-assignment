@@ -1,0 +1,29 @@
+# Azure Configuration
+subscription_id     = "b99c0710-ded3-407b-b632-9fb5dd7edd13"
+resource_group_name = "Tsenko-Tsenkov-Candidate"
+
+# Storage Account for Terraform State
+storage_account_name = "stterraformstate2bcloud"
+container_name       = "tfstate"
+
+# AKS Cluster Configuration
+cluster_name = "aks-2bcloud"
+dns_prefix   = "aks-2bcloud"
+
+# Node Pool Configuration
+node_count                  = 1
+vm_size                     = "Standard_A2_v2"
+temporary_name_for_rotation = "temp"
+kubernetes_version          = "1.32.6"
+
+
+# Container Registry Configuration
+acr_name = "cr-2bcloud"
+
+
+# Resource Tags
+tags = {
+  Environment = "prod"
+  Project     = "2bcloud-assignment"
+  ManagedBy   = "terraform"
+}
